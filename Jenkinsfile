@@ -32,7 +32,8 @@ pipeline {
 
         stage('[Application] :: Install dependencies') {
             steps {
-                sh 'apk add --update python3  py3-unittest-xml-reporting'
+                sh 'apk add --no-cache bash python3 py-pip'
+				sh	'pip install --break-system-packages unittest-xml-reporting'
             }
         }
 
@@ -102,5 +103,4 @@ pipeline {
         }
     }
 }
-
 
