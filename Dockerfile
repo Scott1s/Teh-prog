@@ -1,10 +1,8 @@
 FROM alpine:latest
-RUN apk add --update python3 py3-pip
-RUN python3 -m venv /opt/venv
-RUN pip install Flask
+RUN apk add --update python3 
 
 
 WORKDIR /app 
 COPY . .
 ENTRYPOINT [ "python3" ]
-CMD [ "app.py" ]
+CMD [ "notebook.py" ] 
