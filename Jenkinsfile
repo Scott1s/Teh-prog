@@ -59,6 +59,6 @@ pipeline {
             echo "Successfully pushed images to Docker Hub."
           }
       }
-  }
-
+  } 
+}
 
