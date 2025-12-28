@@ -14,7 +14,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE    = 'sott1s/lab4'
-		DOCKER_CREDS_ID = 'dockerhub-credentials'
+		DOCKER_CREDS_ID = '5cee6cef-d894-4733-b846-3c35971a331e'
     }
 
     options {
@@ -103,4 +103,5 @@ pipeline {
         }
     }
 }
+
 
