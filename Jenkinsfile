@@ -33,7 +33,6 @@ pipeline {
         stage('[Application] :: Install dependencies') {
             steps {
                 sh 'apk add --update python3 py-pip'
-                sh 'pip install Flask'
                 sh 'pip install xml-runner'
             }
         }
@@ -104,3 +103,4 @@ pipeline {
         }
     }
 }
+
