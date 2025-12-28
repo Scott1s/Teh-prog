@@ -17,7 +17,7 @@ pipeline {
     stage('Test') {
        agent {
          docker {
-            image 'puthon:3.9-alpine'
+            image 'python:3.9-alpine'
             args '-u root'
         }
        }
@@ -42,3 +42,4 @@ pipeline {
   }
 
 }
+
