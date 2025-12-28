@@ -24,7 +24,7 @@ pipeline {
        steps {
           sh 'apk add --no-cache build-base'
           sh 'pip install xmlrunner'
-          sh 'python notebook.py'
+          sh 'python test_notebook.py'
         
        }
        post {
@@ -42,3 +42,4 @@ pipeline {
   }
 
 }
+
