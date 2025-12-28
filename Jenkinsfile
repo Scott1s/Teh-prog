@@ -32,7 +32,7 @@ pipeline {
 
         stage('[Application] :: Install dependencies') {
             steps {
-                sh 'apk add --update python3  py3-xml-runner'
+                sh 'apk add --update python3  py3-unittest-xml-reporting'
             }
         }
 
@@ -102,4 +102,5 @@ pipeline {
         }
     }
 }
+
 
