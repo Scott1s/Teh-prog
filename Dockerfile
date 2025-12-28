@@ -1,10 +1,21 @@
-FROM python:3.12-alpine
-RUN apk add --update python3 py3-pip
-RUN python3 -m venv /opt/venv
-RUN pip install Flask
+FROM jenkins/jenkins:lts
 
+USER root
 
-WORKDIR /app 
-COPY . .
-ENTRYPOINT [ "python3" ]
-CMD [ "app.py" ]
+RUN apt-get update && \
+    apt-get install -y ca-certificates curl gnupg lsb-release
+
+RUN install -m 0755 -d /etc/apt/keyrings && \
+    curl -fsSL https://download.docker.com/linux/debian/gpg \
+        -o /etc/apt/keyrings/docker.gpg && \
+    chmod a+r /etc/apt/keyrings/docker.gpg
+
+RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+https://download.docker.com/linux/debian \
+$(lsb_release -cs) stable" \
+> /etc/apt/sources.list.d/docker.list
+
+RUN apt-get update && \
+    apt-get install -y docker-ce-cli
+
+USER jenkins
