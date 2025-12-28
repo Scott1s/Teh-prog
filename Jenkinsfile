@@ -32,8 +32,7 @@ pipeline {
 
         stage('[Application] :: Install dependencies') {
             steps {
-                sh 'apk add --update python3 py-pip'
-                sh 'pip install xml-runner'
+                sh 'apk add --update python3  py3-xml-runner'
             }
         }
 
@@ -103,4 +102,5 @@ pipeline {
         }
     }
 }
+
 
