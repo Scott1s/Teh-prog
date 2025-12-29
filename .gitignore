@@ -1,0 +1,4 @@
+.github/
+.github/*
+
+file_to_ignore.txt
