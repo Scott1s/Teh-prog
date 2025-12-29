@@ -73,7 +73,7 @@ def main():
             print("До побачення!")
             break
         else:
-            print("Невірний вибір!")
+            print("Невірний CHOSE!")
 
 if __name__ == "__main__":
     main()
