@@ -1,3 +1,4 @@
 1. some content
 2. fast-forward
 3. this line will make conflict
+3. Conflicts
